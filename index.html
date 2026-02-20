@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIVYA PREDICTION 2022</title>
+
+<link rel="icon" href="img/favicon.ico">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Inter',sans-serif;
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(5,16,5,.78),rgba(5,16,5,.78)),
+    url("img/unnamed.png") center/cover fixed no-repeat;
+  user-select:none;
+}
+
+.glass-card{
+  background:rgba(15,30,15,.7);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,215,0,.25);
+}
+
+.profile-ring{
+  box-shadow:0 0 30px rgba(255, 225, 0, 0.8);
+  animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.05)}
+}
+
+/* ===== CTA button (unique multi-layer animation) ===== */
+.cta{
+      --mx: 0px;
+      --my: 0px;
+      --tap: 1;
+      position: relative;
+      overflow: hidden;
+      transform: translate3d(var(--mx), var(--my), 0) scale(var(--tap));
+      will-change: transform;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+
+      /* base bg color (requested) */
+      background-color: rgba(0, 153, 204, 0.32);
+      background-image: linear-gradient(135deg,
+        rgba(217, 255, 0, 0.95) 0%,
+        rgba(234, 234, 4, 0.92) 45%,
+        rgba(237, 218, 8, 0.92) 100%
+      );
+      background-size: 240% 240%;
+      background-position: 0% 50%;
+
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow:
+        0 18px 60px rgba(0,0,0,.55),
+        0 0 0 1px rgba(255,255,255,.06) inset,
+        0 0 42px rgba(0,212,255,.18);
+
+      animation:
+        ctaGlow 2.9s ease-in-out infinite,
+        ctaGradient 5.8s ease-in-out infinite,
+        ctaFloat 2.2s ease-in-out infinite,
+        ctaBgColor 4.8s ease-in-out infinite;
+      transition: filter .18s ease;
+    }
+
+    .cta:hover{ filter: brightness(1.06) saturate(1.18); }
+
+    /* inner zoom pulse (doesn't fight magnetic/click) */
+    .cta-inner{ position:relative; z-index:1; display:flex; align-items:center; justify-content:center; gap:.75rem; }
+    .cta-inner{ animation: ctaZoom 2.4s ease-in-out infinite; }
+
+    @keyframes ctaZoom{
+      80%,100%{ transform: scale(1); }
+     80%{ transform: scale(1.045); }
+    }
+
+    @keyframes ctaGlow{
+      0%,100%{ box-shadow: 0 18px 60px rgba(0,0,0,.55), 0 0 42px rgba(0,212,255,.18); }
+      50%{ box-shadow: 0 26px 86px rgba(0,0,0,.62), 0 0 66px rgba(168,85,247,.26); }
+    }
+
+    @keyframes ctaGradient{
+      0%,100%{ background-position: 0% 50%; }
+      50%{ background-position: 100% 50%; }
+    }
+
+    @keyframes ctaFloat{
+      0%,100%{ transform: translate3d(var(--mx), var(--my), 0) scale(var(--tap)); }
+      50%{ transform: translate3d(var(--mx), calc(var(--my) - 3px), 0) scale(var(--tap)); }
+    }
+
+    /* animated BG color layer requested */
+    @keyframes ctaBgColor{
+      0%,100%{ background-color: rgba(0, 153, 204, 0.32); }
+      33%{ background-color: rgba(124, 58, 237, 0.28); }
+      66%{ background-color: rgba(233, 30, 99, 0.26); }
+    }
+
+    /* shine sweep */
+    .cta::before{
+      content:'';
+      position:absolute;
+      top:0; left:-140%;
+      width: 80%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+      transform: skewX(-18deg);
+      transition: left .7s ease;
+      opacity:.95;
+    }
+    .cta:hover::before{ left:160%; }
+
+.cricket-ball{
+  position:fixed;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:radial-gradient(circle,#ff6b6b,#c8102e);
+  box-shadow:0 0 20px rgba(200,16,46,.6);
+  pointer-events:none;
+}
+</style>
+</head>
+
+<body class="text-white flex items-center justify-center p-4">
+
+<div class="cricket-ball" id="cricketBall"></div>
+
+<div class="max-w-md w-full z-10 text-center">
+
+ 
+
+ 
+
+  
+
+  <div class="glass-card p-6 rounded-xl mb-6">
+    <div class="profile-ring inline-block p-1 border-yellow-500 border-2 rounded-full mb-4">
+        <img src="logo.jpg" class="w-28 h-28 rounded-full object-cover">
+      </div>
+
+      <h1 class="text-3xl font-bold text-white-400 font-[Rajdhani]">
+        DIVYA PREDICTION 2022❤️
+      </h1>
+      <p class="text-white-400 text-sm sm:text-base">
+        Real-Time Picks • Live Coverage • Instant Access
+      </p>
+      <p class="text-yellow-600 mb-6">57K+ Active Members</p>
+    
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <div class="glass-card rounded-xl  text-center border-2 border-cricket-green-500/30 hover:border-cricket-gold-400/50">
+            <div class="text-cricket-gold-400 font-bold text-2xl mb-1 stat-number">20,381</div>
+            <div class="text-xs text-gray-300 font-medium">Match Tips</div>
+        </div>
+        <div class="glass-card rounded-xl  text-center border-2 border-cricket-red-500/30 hover:border-cricket-gold-400/50">
+            <div class="text-cricket-red-400 font-bold text-2xl mb-1 stat-number">99%</div>
+            <div class="text-xs text-gray-300 font-medium">Win Rate</div>
+        </div>
+        <div class="glass-card rounded-xl  text-center border-2 border-cricket-green-500/30 hover:border-cricket-gold-400/50">
+            <div class="text-cricket-gold-400 font-bold text-2xl mb-1 stat-number">4.9★</div>
+            <div class="text-xs text-gray-300 font-medium">Rating</div>
+        </div>
+    </div>
+    <div class="flex items-center justify-center gap-6 flex-wrap">
+        <div class="flex flex-col items-center">
+            <i data-feather="check-circle" class="text-cricket-green-400 w-8 h-8 mb-2 trophy-icon"></i>
+            <span class="text-xs text-gray-300">Verified</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i data-feather="lock" class="text-cricket-gold-400 w-8 h-8 mb-2 trophy-icon"></i>
+            <span class="text-xs text-gray-300">Secure</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i data-feather="trending-up" class="text-cricket-red-400 w-8 h-8 mb-2 trophy-icon"></i>
+            <span class="text-xs text-gray-300">Profitable</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <i data-feather="star" class="text-cricket-gold-400 w-8 h-8 mb-2 trophy-icon"></i>
+            <span class="text-xs text-gray-300">Top Rated</span>
+        </div>
+    </div>
+
+
+    
+  </div>
+
+
+  <a href="https://t.me/+h0NIT752zhg5NjRl" target="_blank" style="text-shadow: 1px 1px black;"
+     class="cta block py-5 rounded-xl font-bold text-red-500 text-xl text-uppercase mb-8">
+    🚀 Join Telegram Channel
+  </a>
+
+  <div class="text-xs text-gray-400">
+    © 2026 DIVYA PREDICTION 2022<br>Professional Cricket Analysis
+  </div>
+
+</div>
+
+<script>
+feather.replace();
+
+/* Cricket Ball */
+anime({
+  targets:'#cricketBall',
+  translateX:[0,window.innerWidth-50],
+  translateY:[-80,window.innerHeight*.4],
+  direction:'alternate',
+  duration:4000,
+  loop:true,
+  easing:'easeInOutQuad'
+});
+
+/* ADMIN PROTECTION */
+let isAdmin=false;
+
+/* Admin unlock */
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey && e.shiftKey && e.key.toLowerCase()==='a'){
+    const pass=prompt("Admin Password");
+    if(pass==="manish@2026"){
+      isAdmin=true;
+      alert("Admin Mode Enabled");
+    }
+  }
+});
+
+/* Disable right click & keys for users */
+document.addEventListener('contextmenu',e=>{
+  if(!isAdmin) e.preventDefault();
+});
+
+document.addEventListener('keydown',e=>{
+  if(isAdmin) return;
+
+  if(
+    e.key==="F12" ||
+    (e.ctrlKey && e.key.toLowerCase()==="u") ||
+    (e.ctrlKey && e.shiftKey && ["i","j","c"].includes(e.key.toLowerCase()))
+  ){
+    e.preventDefault();
+  }
+});
+
+/* Disable drag */
+document.addEventListener('dragstart',e=>e.preventDefault());
+</script>
+
+</body>
+</html>
